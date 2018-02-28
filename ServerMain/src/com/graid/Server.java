@@ -9,11 +9,10 @@ import java.util.List;
 public class Server extends Thread {
 
     private final int port;
-    ArrayList<ServerWorker> workerList;
+    ArrayList<ServerWorker> workerList = new ArrayList<>();
 
     Server(int port) {
         this.port = port;
-        workerList = new ArrayList<>();
     }
 
     public ArrayList<ServerWorker> getWorkerList() {

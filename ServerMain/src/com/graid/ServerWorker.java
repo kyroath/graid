@@ -2,10 +2,8 @@ package com.graid;
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Hashtable;
 
-import ch.qos.logback.classic.Logger;
 import org.apache.commons.lang3.StringUtils;
 
 public class ServerWorker extends Thread {
@@ -59,7 +57,7 @@ public class ServerWorker extends Thread {
                     String[] msgTokens = StringUtils.split(line, null, 3);
                     handleTxtMessage(msgTokens);
                 } else {
-                    String msg = "unknown command: " + cmd;
+                    String msg = "unknown command: " + cmd + "\n";
                     outputStream.write(msg.getBytes());
                 }
 
@@ -68,7 +66,7 @@ public class ServerWorker extends Thread {
 
     }
 
-    private void handleTxtMessage(String[] msgTokens) {
+    private void handleTxtMessage(String[] msgTokens) throws IOException {
         String sendTo = msgTokens[1];
         String msgBody = msgTokens[2];
 
@@ -76,7 +74,7 @@ public class ServerWorker extends Thread {
 
         for (ServerWorker worker : workerList) {
             if (worker.getUsername().equalsIgnoreCase(sendTo)) {
-                // foo
+                worker.send("txtMsg " + username + " " + msgBody + "\n");
             }
         }
     }
@@ -85,8 +83,8 @@ public class ServerWorker extends Thread {
 
         if (tokens.length == 3) {
 
-            String username = tokens[0];
-            String password = tokens[1];
+            String username = tokens[1];
+            String password = tokens[2];
 
             // Will be coonverted to database
 
@@ -96,7 +94,7 @@ public class ServerWorker extends Thread {
             users.put("talha", "talha");
 
             if ( (users.contains(username) && users.get(username).equals(password)) ) {
-                String msg = "ok login:" + username + "\n";
+                String msg = "ok login: " + username + "\n";
                 outputStream.write(msg.getBytes());
 
                 this.username = username;
@@ -106,11 +104,15 @@ public class ServerWorker extends Thread {
                 ArrayList<ServerWorker> workerList = server.getWorkerList();
 
                 for (ServerWorker worker : workerList) {
-                    if (worker != null && !worker.getUsername().equals(username)) {
+                    if (!worker.getUsername().equals(username)) {
                         String onlineList = "online " + worker.getUsername() + "\n";
                         send(onlineList);
+                    }
+                }
 
-                        String onlineMsg = "onlline " + username + "\n";
+                String onlineMsg = "online " + username + "\n";
+                for(ServerWorker worker : workerList) {
+                    if (!username.equals(worker.getUsername())) {
                         worker.send(onlineMsg);
                     }
                 }
