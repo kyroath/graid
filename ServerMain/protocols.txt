@@ -1,0 +1,50 @@
+login
+
+    sent ==> login username password
+    recv ==> ok login / error login
+
+logout
+
+    sent ==> logout
+    recv ==> (none)
+
+txtMsg
+
+    sent ==> txtMsg sentTo msgBody
+    recv ==> txtMsg sentFrom msgBody
+
+vote
+
+    create
+
+        sent ==> vote create question answers...
+        recv ==> ok vote create / error vote create errorId
+
+            errorId
+
+                0: no answer given
+
+    answer
+
+        sent ==> vote answer question+userCreated questionAnswer
+        recv ==> ok vote answer / error vote answer errorId
+
+            errorId
+
+                0: question is null
+                1: question is empty
+
+    get
+
+        sent ==> vote get question+userCreated
+        recv ==> vote get question+userCreated answer#voteCount / error vote get errorId
+
+            errorId
+
+                0: no answer
+                1: no question
+
+    delete
+
+        sent ==> vote delete question+userCreated+id
+        recv ==> ok vote delete / error vote delete errorId
