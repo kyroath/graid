@@ -18,6 +18,7 @@ public class ChatClient {
     private OutputStream serverOut;
     private InputStream serverIn;
     private BufferedReader bufferedReader;
+    String username;
 
     ChatClient(String serverName, int serverPort) {
         this.serverName = serverName;
@@ -56,6 +57,7 @@ public class ChatClient {
 
                 if (client.login("guest", "guest")) {
                     System.out.println("Login succesful.");
+                    System.out.println("You've logged in as: " + client.username);
 
                     client.msg("fatih", "Hello Fatih!");
 
@@ -86,6 +88,7 @@ public class ChatClient {
         System.out.println("Server response: " + response);
 
         if (("ok login: " + username).equals(response)) {
+            this.username = username;
             startMessageReader();
             return true;
         } else {

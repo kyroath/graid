@@ -60,12 +60,23 @@ public class ServerWorker extends Thread {
                     handleTxtMessage(msgTokens);
                 } else if ("vote".equalsIgnoreCase(cmd)) {
                     handleVote(tokens);
+                } else if ("get".equalsIgnoreCase(cmd)) {
+                    handleGetUsername(tokens);
                 } else {
                     String msg = "unknown command: " + cmd + "\n";
                     outputStream.write(msg.getBytes());
                 }
 
             }
+        }
+
+    }
+
+    private void handleGetUsername(String[] tokens) throws IOException {
+
+        if ("username".equalsIgnoreCase(tokens[1])) {
+            String msg = "username " + getUsername();
+            send(msg);
         }
 
     }
@@ -282,7 +293,7 @@ public class ServerWorker extends Thread {
                 ArrayList<ServerWorker> workerList = server.getWorkerList();
 
                 for (ServerWorker worker : workerList) {
-                    if (!worker.getUsername().equals(username)) {
+                    if (worker != null && !worker.getUsername().equals(username)) {
                         String onlineList = "online " + worker.getUsername() + "\n";
                         send(onlineList);
                     }
