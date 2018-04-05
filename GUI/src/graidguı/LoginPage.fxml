@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPanel" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-image: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.LoginPageController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="loginPanel2" layoutX="427.0" layoutY="99.0" prefHeight="452.0" prefWidth="346.0" style="-fx-background-color: WHITE;">
+         <children>
+            <TextField fx:id="emailField" layoutX="76.0" layoutY="144.0" prefHeight="36.0" prefWidth="196.0" promptText="E-mail">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="graidLogo" fitHeight="67.0" fitWidth="168.0" layoutX="88.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="label1" alignment="CENTER" layoutX="99.0" layoutY="108.0" prefHeight="36.0" prefWidth="149.0" text="Log in to Graid" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="76.0" layoutY="190.0" prefHeight="36.0" prefWidth="196.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginButton" layoutX="76.0" layoutY="242.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="39.0" prefWidth="196.0" style="-fx-border-width: 6; -fx-border-color: #ff6600; -fx-background-color: #708090;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label fx:id="label2" alignment="CENTER" layoutX="74.0" layoutY="301.0" prefHeight="36.0" prefWidth="196.0" text="New to Graid ?">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="signupButton" layoutX="76.0" layoutY="345.0" mnemonicParsing="false" onAction="#getSignupPage" prefHeight="39.0" prefWidth="196.0" style="-fx-background-color: #708090; -fx-border-color: #ff6600; -fx-border-width: 5;" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

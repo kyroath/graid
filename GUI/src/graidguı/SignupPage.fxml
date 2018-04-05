@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.SignupPageController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="427.0" layoutY="103.0" prefHeight="452.0" prefWidth="346.0" style="-fx-background-color: WHITE;">
+         <children>
+            <ImageView fx:id="graidLogo" fitHeight="67.0" fitWidth="168.0" layoutX="88.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="83.0" layoutY="108.0" prefHeight="47.0" prefWidth="178.0" text="Join Graid Today">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" layoutX="83.0" layoutY="155.0" prefHeight="37.0" prefWidth="178.0" promptText="Full Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailField" layoutX="83.0" layoutY="208.0" prefHeight="37.0" prefWidth="178.0" promptText="E-mail">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="83.0" layoutY="265.0" prefHeight="37.0" prefWidth="178.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="signupButton" layoutX="84.0" layoutY="327.0" mnemonicParsing="false" onAction="#signupAction" prefHeight="37.0" prefWidth="178.0" style="-fx-border-color: #ff6600; -fx-border-width: 5; -fx-background-color: #708090;" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
