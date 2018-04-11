@@ -1,25 +1,23 @@
 package com.graid.messages.client;
 
 import com.graid.User;
+import com.graid.handles.Handle;
 import com.graid.handles.server.SLoginHandle;
 
 public class CLoginMessage extends CMessage{
 
-    User user;
+    private final User user;
 
-    CLoginMessage(User user) {
+    public CLoginMessage(User user) {
         this.user = user;
+    }
+
+    @Override
+    public Handle handle() {
+        return new SLoginHandle(this);
     }
 
     public User getUser() {
         return user;
-    }
-
-    @Override
-    public void handle() {
-
-        SLoginHandle handle = new SLoginHandle(this);
-        handle.handle();
-
     }
 }

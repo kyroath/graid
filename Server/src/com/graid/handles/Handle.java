@@ -1,9 +1,9 @@
 package com.graid.handles;
 
-public class Handle {
+import com.graid.messages.Message;
 
-    public void handle() {
-        //
-    }
+public abstract class Handle {
+
+    public abstract Message handle();
 
 }

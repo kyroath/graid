@@ -2,5 +2,8 @@ package com.graid.messages.client;
 
 import com.graid.messages.Message;
 
-public class CMessage extends Message {
+import java.io.ObjectOutputStream;
+
+public abstract class CMessage extends Message {
+
 }

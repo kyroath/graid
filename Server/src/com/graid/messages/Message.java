@@ -1,28 +1,12 @@
 package com.graid.messages;
 
+import com.graid.handles.Handle;
+
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public class Message {
+public abstract class Message implements Serializable {
 
-    ObjectOutputStream outputStream;
-
-    public Message(ObjectOutputStream outputStream) {
-
-        this.outputStream = outputStream;
-
-    }
-
-    public void send() {
-        try {
-            outputStream.writeObject(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void handle() {
-        //
-    }
-
+    public abstract Handle handle();
 }

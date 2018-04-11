@@ -4,28 +4,34 @@ import com.graid.User;
 import com.graid.messages.client.CLoginMessage;
 import com.graid.messages.server.SLoginMessage;
 
-import java.io.ObjectOutputStream;
-
 public class SLoginHandle extends SHandle {
 
-    User user;
+    private final CLoginMessage message;
 
     public SLoginHandle(CLoginMessage message) {
-        this.user = message.getUser();
+        this.message = message;
     }
 
     @Override
-    public void handle() {
+    public SLoginMessage handle() {
 
-        int returnCode = authenticate(user);
-        SLoginMessage returnMessage = new SLoginMessage(user, returnCode);
-        returnMessage.send();
+        int authenticateResult = authenticate();
+        SLoginMessage serverMessage = new SLoginMessage(message.getUser(), authenticateResult);
+
+
+
+        return serverMessage;
 
     }
 
-    private int authenticate(User user) {
+    private int authenticate() {
 
-        return 0;
+        if (message.getUser().equals(new User("fatih", "fatih"))
+                || message.getUser().equals(new User("talha", "talha"))) {
+            return 1;
+        }
+
+        return -1;
 
     }
 }

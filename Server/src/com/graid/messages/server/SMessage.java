@@ -2,10 +2,8 @@ package com.graid.messages.server;
 
 import com.graid.messages.Message;
 
-public class SMessage extends Message {
+import java.io.ObjectOutputStream;
 
-    SMessage() {
-        super();
-    }
+public abstract class SMessage extends Message {
 
 }

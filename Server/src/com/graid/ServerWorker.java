@@ -1,57 +1,71 @@
 package com.graid;
 
+import com.graid.handles.Handle;
 import com.graid.messages.Message;
+import com.graid.messages.server.SLoginMessage;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class ServerWorker extends Thread{
+public class ServerWorker extends Thread {
 
-    Server server;
-    ObjectOutputStream outputStream;
-    ObjectInputStream inputStream;
+    private final Server server;
+    private final ObjectOutputStream objectOutputStream;
+    private final ObjectInputStream objectInputStream;
 
-    public ServerWorker(Server server, Socket clientSocket) {
+    User user = null;
+
+    boolean loggedIn = false;
+
+    ServerWorker(Server server, Socket clientSocket) throws IOException {
 
         this.server = server;
-        try {
-
-            outputStream = new ObjectOutputStream(clientSocket.getOutputStream());
-            inputStream = new ObjectInputStream(clientSocket.getInputStream());
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.objectOutputStream = new ObjectOutputStream(clientSocket.getOutputStream());
+        this.objectInputStream = new ObjectInputStream(clientSocket.getInputStream());
 
     }
 
     @Override
     public void run() {
-
         try {
-            handle();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+            handleClientSocket();
+        } catch (EOFException e) {
+            //ignore
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
-    private void handle() throws IOException, ClassNotFoundException {
+    private void handleClientSocket() throws IOException, ClassNotFoundException {
 
         Message message;
+        while ((message = (Message) objectInputStream.readObject()) != null) {
 
-        while ((message = (Message) inputStream.readObject())!= null) {
+            Handle serverHandler = message.handle();
+            Message serverMessage = serverHandler.handle();
+            send(serverMessage);
 
-            message.handle();
+
+            // WILL BE CHANGED
+            if ((serverMessage instanceof SLoginMessage) && !loggedIn) {
+                user = ((SLoginMessage) serverMessage).getUser();
+                loggedIn = true;
+
+                server.addOnline(user, this);
+            }
 
         }
+    }
 
-        inputStream.close();
-        outputStream.close();
-
+    private void send(Message message) {
+        try {
+            objectOutputStream.writeObject(message);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
+
