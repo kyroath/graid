@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.TagPageController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0" opacity="0.35" pickOnBounds="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-1.0" prefHeight="652.0" prefWidth="319.0" style="-fx-background-color: #708090;">
+         <children>
+            <Button fx:id="homeButton" layoutX="41.0" layoutY="551.0" mnemonicParsing="false" onAction="#getMainPage" prefHeight="65.0" prefWidth="67.0" text="HomeButton">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="searchButton" layoutX="126.0" layoutY="551.0" mnemonicParsing="false" onAction="#getGroupSearchPage" prefHeight="65.0" prefWidth="67.0" text="PlusButton">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="profileButton" layoutX="211.0" layoutY="551.0" mnemonicParsing="false" onAction="#getProfilePage" prefHeight="65.0" prefWidth="67.0" text="ProfileButton">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="profilePicture" fitHeight="70.0" fitWidth="70.0" layoutX="25.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="usernameLabel" layoutX="134.0" layoutY="40.0" prefHeight="49.0" prefWidth="154.0" text="Username Here" textFill="#9e9898">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="120.0" layoutX="160.0" layoutY="200.0" startX="-120.0" stroke="#9e9898" />
+            <Line endX="120.0" layoutX="160.0" layoutY="280.0" startX="-120.0" stroke="#9e9898" />
+            <Line endX="120.0" layoutX="160.0" layoutY="360.0" startX="-120.0" stroke="#9e9898" />
+            <Line endX="120.0" layoutX="160.0" layoutY="440.0" startX="-120.0" stroke="#9e9898" />
+            <Hyperlink fx:id="groupLink1" layoutX="90.0" layoutY="140.0" prefHeight="41.0" prefWidth="189.0" text="Group 1" visited="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="groupLink2" layoutX="90.0" layoutY="220.0" prefHeight="41.0" prefWidth="189.0" text="Group 2" visited="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="groupLink3" layoutX="90.0" layoutY="300.0" prefHeight="41.0" prefWidth="189.0" text="Group 3" visited="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="groupLink4" layoutX="90.0" layoutY="380.0" prefHeight="41.0" prefWidth="189.0" text="Group 4" visited="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="groupLink5" layoutX="90.0" layoutY="460.0" prefHeight="41.0" prefWidth="189.0" text="Group 5" visited="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+      <Label layoutX="348.0" layoutY="31.0" text="Select Tag Type:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="regularTag" layoutX="600.0" layoutY="34.0" mnemonicParsing="false" text="Regular">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="credentialTag" layoutX="825.0" layoutY="34.0" mnemonicParsing="false" text="Credential">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="348.0" layoutY="76.0" text="Tag Name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tagField" layoutX="486.0" layoutY="77.0" prefHeight="25.0" prefWidth="265.0" />
+      <Button fx:id="createTagButton" layoutX="799.0" layoutY="65.0" mnemonicParsing="false" onAction="#createTag" prefHeight="41.0" prefWidth="127.0" style="-fx-background-color: #ff6600;" text="CREATE" />
+      <Line endX="650.0" layoutX="449.0" layoutY="150.0" startX="-100.0" />
+      <TableView fx:id="tagTable" layoutX="349.0" layoutY="207.0" prefHeight="383.0" prefWidth="751.0">
+        <columns>
+          <TableColumn prefWidth="203.0" text="Username" />
+          <TableColumn minWidth="0.0" prefWidth="389.0" text="Requested Credential of Yours" />
+        </columns>
+      </TableView>
+      <Label layoutX="348.0" layoutY="162.0" text="Credential Requests">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
