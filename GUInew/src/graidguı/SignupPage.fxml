@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="signupPanel" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-image: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.SignupPageController">
+   <children>
+      <ImageView fx:id="graidLogo1" fitHeight="650.0" fitWidth="1200.0" pickOnBounds="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="label1" alignment="TOP_LEFT" layoutX="155.0" layoutY="270.0" prefHeight="36.0" prefWidth="149.0" text="USERNAME" textAlignment="CENTER" textFill="#ffecec">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="usernameField" layoutX="150.0" layoutY="298.0" maxWidth="712.0" minWidth="307.0" prefHeight="54.0" prefWidth="427.0" style="-fx-text-inner-color: WHITE;" unFocusColor="#4059a9">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="graidLogo" fitHeight="148.0" fitWidth="402.0" layoutX="399.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="label11" alignment="TOP_LEFT" layoutX="155.0" layoutY="370.0" prefHeight="36.0" prefWidth="149.0" text="PASSWORD" textAlignment="CENTER" textFill="#ffecec">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="passwordField" layoutX="150.0" layoutY="396.0" maxWidth="502.0" minWidth="427.0" prefHeight="54.0" prefWidth="427.0" style="-fx-text-inner-color: WHITE;" unFocusColor="#4059a9">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXPasswordField>
+      <Button fx:id="registerButton" layoutX="349.0" layoutY="475.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="54.0" prefWidth="502.0" style="-fx-background-color: #1B2E69;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label fx:id="label12" alignment="TOP_LEFT" layoutX="580.0" layoutY="270.0" prefHeight="36.0" prefWidth="149.0" text="E - MAIL" textAlignment="CENTER" textFill="#ffecec">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="label111" alignment="TOP_LEFT" layoutX="580.0" layoutY="352.0" prefHeight="36.0" prefWidth="287.0" text="PASSWORD AGAIN" textAlignment="CENTER" textFill="#ffecec">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="emailField" layoutX="580.0" layoutY="298.0" maxWidth="712.0" minWidth="307.0" prefHeight="54.0" prefWidth="427.0" style="-fx-text-inner-color: WHITE;" unFocusColor="#4059a9">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="passwordField2" layoutX="580.0" layoutY="396.0" maxWidth="502.0" minWidth="427.0" prefHeight="54.0" prefWidth="427.0" style="-fx-text-inner-color: WHITE;" unFocusColor="#4059a9">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

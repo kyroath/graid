@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.ProfilePageController">
+   <children>
+      <ImageView fx:id="profilePicture2" fitHeight="183.0" fitWidth="189.0" layoutX="421.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="profileUserName" alignment="CENTER" layoutX="399.0" layoutY="215.0" prefHeight="55.0" prefWidth="234.0" text="Username">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="profileDescription" alignment="CENTER" layoutX="407.0" layoutY="270.0" prefHeight="27.0" prefWidth="216.0" text="School etc." textFill="#868686">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="725.0" layoutX="438.0" layoutY="310.0" startX="-100.0" />
+      <Label layoutX="701.0" layoutY="21.0" text="TAGS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="450.0" layoutX="701.0" layoutY="160.0" />
+      <Label layoutX="701.0" layoutY="171.0" text="CREDENTIALS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="180.0" layoutX="650.0" layoutY="150.0" rotate="90.0" startX="-100.0" />
+      <AnchorPane layoutX="337.0" layoutY="340.0" prefHeight="275.0" prefWidth="265.0" style="-fx-background-color: WHITE; -fx-border-color: #3B2122;">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: #3B2122;">
+               <children>
+                  <ImageView fx:id="memberPicture1" fitHeight="65.0" fitWidth="57.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="reviewerName1" layoutX="65.0" layoutY="-3.0" prefHeight="34.0" prefWidth="140.0" text="Member Name" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reviewerRole1" layoutX="65.0" layoutY="27.0" prefHeight="30.0" prefWidth="140.0" text="Role" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="review1" alignment="TOP_LEFT" layoutX="9.0" layoutY="79.0" prefHeight="143.0" prefWidth="247.0" text="Review Here" />
+            <ImageView fx:id="starRating1" fitHeight="41.0" fitWidth="226.0" layoutX="20.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="622.0" layoutY="340.0" prefHeight="275.0" prefWidth="265.0" style="-fx-background-color: WHITE; -fx-border-color: #3B2122;">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: #3B2122;">
+               <children>
+                  <ImageView fx:id="memberPicture11" fitHeight="65.0" fitWidth="57.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="reviewerName2" layoutX="65.0" layoutY="-3.0" prefHeight="34.0" prefWidth="140.0" text="Member Name" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reviewerRole2" layoutX="65.0" layoutY="27.0" prefHeight="30.0" prefWidth="140.0" text="Role" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="review2" alignment="TOP_LEFT" layoutX="14.0" layoutY="81.0" prefHeight="110.0" prefWidth="241.0" text="Review Here" />
+            <ImageView fx:id="starRating2" fitHeight="41.0" fitWidth="226.0" layoutX="19.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="900.0" layoutY="340.0" prefHeight="275.0" prefWidth="264.0" style="-fx-background-color: WHITE; -fx-border-color: #3B2122;">
+         <children>
+            <AnchorPane prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: #3B2122;">
+               <children>
+                  <ImageView fx:id="memberPicture12" fitHeight="65.0" fitWidth="64.0" layoutX="1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="reviewerName3" layoutX="65.0" layoutY="-3.0" prefHeight="34.0" prefWidth="140.0" text="Member Name" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reviewerRole3" layoutX="65.0" layoutY="27.0" prefHeight="30.0" prefWidth="140.0" text="Role" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="review3" alignment="TOP_LEFT" layoutX="14.0" layoutY="81.0" prefHeight="110.0" prefWidth="241.0" text="Review Here" />
+            <ImageView fx:id="starRating3" fitHeight="41.0" fitWidth="226.0" layoutX="19.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-1.0" prefHeight="652.0" prefWidth="319.0" style="-fx-background-color: #3B2122;">
+         <children>
+            <ImageView fx:id="profilePicture" fitHeight="64.0" fitWidth="64.0" layoutX="26.0" layoutY="26.0" onMouseClicked="#getProfilePage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@usericon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="usernameLabel" layoutX="114.0" layoutY="14.0" onMouseClicked="#getProfilePage" prefHeight="49.0" prefWidth="189.0" text="Sample Username" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="175.0" layoutX="130.0" layoutY="120.0" startX="-120.0" stroke="#9e9898" />
+            <ImageView fx:id="searchIcon" fitHeight="70.0" fitWidth="70.0" layoutX="177.0" layoutY="551.0" onMouseClicked="#getGroupSearchPage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@searchicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logoutIcon" fitHeight="41.0" fitWidth="30.0" layoutX="114.0" layoutY="58.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logouticon.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="groupPane1" layoutX="10.0" layoutY="135.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage1" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName11" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Graid" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc1" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Group organising application" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="groupPane2" layoutX="12.0" layoutY="209.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage2" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName21" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc2" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+                  <AnchorPane fx:id="groupPane3" layoutY="72.0" prefHeight="86.0" prefWidth="296.0">
+                     <children>
+                        <ImageView fx:id="groupImage3" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="groupName31" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group2" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="groupDesc3" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="groupPane4" layoutX="12.0" layoutY="358.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage4" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName4" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group3" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc4" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="groupPane5" layoutX="10.0" layoutY="444.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage5" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName5" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group4" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc5" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="homeIcon" fitHeight="64.0" fitWidth="64.0" layoutX="82.0" layoutY="552.0" onMouseClicked="#getMainPage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@homeicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="settingsIcon" fitHeight="34.0" fitWidth="30.0" layoutX="1149.0" layoutY="14.0" onMouseClicked="#getProfileChangePage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@settingsicon.png" />
+         </image>
+      </ImageView>
+      <FlowPane fx:id="tagPane" layoutX="701.0" layoutY="60.0" prefHeight="86.0" prefWidth="451.0" />
+      <FlowPane fx:id="credentialPane" layoutX="701.0" layoutY="200.0" prefHeight="86.0" prefWidth="451.0" />
+   </children>
+</AnchorPane>

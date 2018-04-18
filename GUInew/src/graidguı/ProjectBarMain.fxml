@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="652.0" prefWidth="319.0" style="-fx-background-color: #3B2122;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="profilePicture" fitHeight="64.0" fitWidth="64.0" layoutX="26.0" layoutY="26.0" onMouseClicked="#getProfilePage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@usericon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="usernameLabel" layoutX="114.0" layoutY="14.0" onMouseClicked="#getProfilePage" prefHeight="49.0" prefWidth="189.0" text="Sample Username" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="175.0" layoutX="130.0" layoutY="120.0" startX="-120.0" stroke="#9e9898" />
+      <ImageView fx:id="searchIcon" fitHeight="70.0" fitWidth="70.0" layoutX="169.0" layoutY="551.0" onMouseClicked="#getGroupSearchPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@searchicon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logoutIcon" fitHeight="41.0" fitWidth="30.0" layoutX="114.0" layoutY="58.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logouticon.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="groupPane1" layoutX="10.0" layoutY="135.0" prefHeight="86.0" prefWidth="296.0">
+         <children>
+            <ImageView fx:id="groupImage1" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="groupName1" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Graid" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupDesc1" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Group organising application" textFill="#bcb8b8" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="groupPane2" layoutX="12.0" layoutY="209.0" prefHeight="86.0" prefWidth="296.0">
+         <children>
+            <ImageView fx:id="groupImage2" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="groupName2" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupDesc2" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+            <AnchorPane fx:id="groupPane3" layoutY="72.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage3" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName3" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group2" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc3" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="groupPane4" layoutX="12.0" layoutY="358.0" prefHeight="86.0" prefWidth="296.0">
+         <children>
+            <ImageView fx:id="groupImage4" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="groupName4" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group3" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupDesc4" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="groupPane5" layoutX="10.0" layoutY="444.0" prefHeight="86.0" prefWidth="296.0">
+         <children>
+            <ImageView fx:id="groupImage5" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="groupName5" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group4" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupDesc5" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="homeIcon" fitHeight="64.0" fitWidth="64.0" layoutX="79.0" layoutY="555.0" onMouseClicked="#getMainPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@homeicon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

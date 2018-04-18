@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-image: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.LoginPageController">
+   <children>
+      <ImageView fx:id="graidLogo1" fitHeight="650.0" fitWidth="1200.0" pickOnBounds="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="label1" alignment="TOP_LEFT" layoutX="360.0" layoutY="259.0" prefHeight="36.0" prefWidth="149.0" text="USERNAME" textAlignment="CENTER" textFill="#ffecec">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="usernameField" layoutX="360.0" layoutY="298.0" maxWidth="712.0" minWidth="307.0" prefHeight="54.0" prefWidth="502.0" style="-fx-text-inner-color: WHITE;" unFocusColor="#4059a9">
+         <font>
+            <Font size="22.0" />
+         </font></JFXTextField>
+      <Label fx:id="label11" alignment="TOP_LEFT" layoutX="360.0" layoutY="360.0" prefHeight="36.0" prefWidth="149.0" text="PASSWORD" textAlignment="CENTER" textFill="#ffecec">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="passwordField" layoutX="360.0" layoutY="396.0" maxWidth="502.0" minWidth="502.0" prefHeight="50.0" prefWidth="502.0" style="-fx-text-inner-color: WHITE;" unFocusColor="#4059a9">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXPasswordField>
+      <Button fx:id="loginButton" layoutX="360.0" layoutY="475.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="54.0" prefWidth="502.0" style="-fx-background-color: #1B2E69;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="435.0" layoutY="553.0" prefHeight="30.0" prefWidth="218.0" text="Don't have an account ? " textFill="#5b74bf">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="658.0" layoutY="553.0" onMouseClicked="#getSignupPage" prefHeight="30.0" prefWidth="287.0" text="Register!" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="360.0" layoutY="66.0" prefHeight="165.0" prefWidth="502.0" text="g r a i d" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="96.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

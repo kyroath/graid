@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graidguı.MainPageController">
+   <children>
+      <AnchorPane prefHeight="652.0" prefWidth="319.0" style="-fx-background-color: #3B2122;">
+         <children>
+            <ImageView fx:id="profilePicture" fitHeight="64.0" fitWidth="64.0" layoutX="26.0" layoutY="26.0" onMouseClicked="#getProfilePage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@usericon.png" />
+               </image></ImageView>
+            <Label fx:id="usernameLabel" layoutX="114.0" layoutY="14.0" onMouseClicked="#getProfilePage" prefHeight="49.0" prefWidth="189.0" text="Sample Username" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="175.0" layoutX="130.0" layoutY="120.0" startX="-120.0" stroke="#9e9898" />
+            <ImageView fx:id="tagIcon" fitHeight="64.0" fitWidth="64.0" layoutX="82.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@homeicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="searchIcon" fitHeight="70.0" fitWidth="70.0" layoutX="169.0" layoutY="551.0" onMouseClicked="#getGroupSearchPage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@searchicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logoutIcon" fitHeight="41.0" fitWidth="30.0" layoutX="114.0" layoutY="58.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logouticon.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="groupPane1" layoutX="10.0" layoutY="135.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage1" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName1" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Graid" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc1" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Group organising application" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="groupPane2" layoutX="12.0" layoutY="209.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage2" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName2" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc2" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+                  <AnchorPane fx:id="groupPane3" layoutY="72.0" prefHeight="86.0" prefWidth="296.0">
+                     <children>
+                        <ImageView fx:id="groupImage3" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="groupName3" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group2" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="groupDesc3" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="groupPane4" layoutX="12.0" layoutY="358.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage4" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName4" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group3" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc4" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="groupPane5" layoutX="10.0" layoutY="444.0" prefHeight="86.0" prefWidth="296.0">
+               <children>
+                  <ImageView fx:id="groupImage5" fitHeight="78.0" fitWidth="78.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="groupName5" layoutX="78.0" layoutY="14.0" onMouseClicked="#getGroupPage" prefHeight="30.0" prefWidth="189.0" text="Sample Group4" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="groupDesc5" layoutX="78.0" layoutY="44.0" prefHeight="28.0" prefWidth="211.0" text="Project Description" textFill="#bcb8b8" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="336.0" layoutY="81.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="264.0" style="-fx-border-color: #708090;">
+         <children>
+            <Label fx:id="task1Title1" layoutX="14.0" layoutY="8.0" prefHeight="28.0" prefWidth="211.0" text="Main Server Connection • 3 March">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label fx:id="task1Desc1" alignment="TOP_LEFT" layoutX="16.0" layoutY="36.0" prefHeight="41.0" prefWidth="232.0" text="Need to connect ..." textFill="#6f6e6e" />
+            <Label fx:id="task1Title2" layoutX="14.0" layoutY="77.0" prefHeight="28.0" prefWidth="211.0" text="Test client • 10 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task1Title3" layoutX="14.0" layoutY="146.0" prefHeight="28.0" prefWidth="211.0" text="Add encryption • 29 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task1Desc2" alignment="TOP_LEFT" layoutX="16.0" layoutY="105.0" prefHeight="41.0" prefWidth="222.0" text="Create a test..." textFill="#6f6e6e" />
+            <Label fx:id="task1Desc3" alignment="TOP_LEFT" layoutX="16.0" layoutY="174.0" prefHeight="41.0" prefWidth="222.0" text="Add a ..." textFill="#6f6e6e" />
+            <ImageView fx:id="task1img1" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="21.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="task1img2" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="90.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="task1img3" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="153.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Line endX="100.0" layoutX="750.0" layoutY="500.0" opacity="0.75" rotate="90.0" scaleX="1.5" startX="-90.0" />
+      <AnchorPane fx:id="taskPanel1" layoutX="336.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="264.0" style="-fx-background-color: #3B2122;">
+         <children>
+            <ImageView fx:id="groupImage1" fitHeight="58.0" fitWidth="64.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="panelName1" layoutX="78.0" layoutY="4.0" onMouseClicked="#getGroupProfilePage" prefHeight="17.0" prefWidth="141.0" text="Graid" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="panelDesc1" layoutX="78.0" layoutY="35.0" prefHeight="17.0" prefWidth="163.0" text="Group organising application" textFill="#bcb8b8">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="taskPanel2" layoutX="619.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="264.0" style="-fx-background-color: #3B2122;">
+         <children>
+            <ImageView fx:id="groupImage2" fitHeight="58.0" fitWidth="64.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="panelName2" layoutX="78.0" layoutY="4.0" onMouseClicked="#getGroupProfilePage" prefHeight="17.0" prefWidth="141.0" text="Sample Group" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="panelDesc2" layoutX="78.0" layoutY="35.0" prefHeight="17.0" prefWidth="163.0" text="Project Description" textFill="#bcb8b8">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="taskPanel3" layoutX="905.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="264.0" style="-fx-background-color: #3B2122;">
+         <children>
+            <ImageView fx:id="groupImage3" fitHeight="58.0" fitWidth="64.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="panelName3" layoutX="78.0" layoutY="4.0" onMouseClicked="#getGroupProfilePage" prefHeight="17.0" prefWidth="141.0" text="Graid" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="panelDesc3" layoutX="78.0" layoutY="35.0" prefHeight="17.0" prefWidth="163.0" text="Project Description" textFill="#bcb8b8">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="619.0" layoutY="81.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="264.0" style="-fx-border-color: #708090;">
+         <children>
+            <Label fx:id="task2Title1" layoutX="14.0" layoutY="8.0" prefHeight="28.0" prefWidth="211.0" text="Main Server Connection • 3 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task2Desc1" alignment="TOP_LEFT" layoutX="16.0" layoutY="36.0" prefHeight="41.0" prefWidth="232.0" text="Need to connect ..." textFill="#6f6e6e" />
+            <Label fx:id="task2Title2" layoutX="14.0" layoutY="77.0" prefHeight="28.0" prefWidth="211.0" text="Test client • 10 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task2Title3" layoutX="14.0" layoutY="146.0" prefHeight="28.0" prefWidth="211.0" text="Add encryption • 29 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task2Desc2" alignment="TOP_LEFT" layoutX="16.0" layoutY="105.0" prefHeight="41.0" prefWidth="222.0" text="Create a test..." textFill="#6f6e6e" />
+            <Label fx:id="task2Desc3" alignment="TOP_LEFT" layoutX="16.0" layoutY="174.0" prefHeight="41.0" prefWidth="222.0" text="Add a ..." textFill="#6f6e6e" />
+            <ImageView fx:id="task2img1" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="21.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="task2img2" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="90.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="task2img3" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="152.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="905.0" layoutY="81.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="264.0" style="-fx-border-color: #708090;">
+         <children>
+            <Label fx:id="task3Title1" layoutX="14.0" layoutY="8.0" prefHeight="28.0" prefWidth="211.0" text="Main Server Connection • 3 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task3Desc1" alignment="TOP_LEFT" layoutX="16.0" layoutY="36.0" prefHeight="41.0" prefWidth="232.0" text="Need to connect ..." textFill="#6f6e6e" />
+            <Label fx:id="task3Title2" layoutX="14.0" layoutY="77.0" prefHeight="28.0" prefWidth="211.0" text="Test client • 10 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task3Title3" layoutX="14.0" layoutY="146.0" prefHeight="28.0" prefWidth="211.0" text="Add encryption • 29 March">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="task3Desc2" alignment="TOP_LEFT" layoutX="16.0" layoutY="105.0" prefHeight="41.0" prefWidth="222.0" text="Create a test..." textFill="#6f6e6e" />
+            <Label fx:id="task3Desc3" alignment="TOP_LEFT" layoutX="16.0" layoutY="174.0" prefHeight="41.0" prefWidth="222.0" text="Add a ..." textFill="#6f6e6e" />
+            <ImageView fx:id="task3img1" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="21.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="task3img2" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="90.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="task3img3" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="153.0" onMouseClicked="#setTaskColor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@red.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Line endX="730.0" layoutX="434.0" layoutY="342.0" opacity="0.75" startX="-100.0" />
+      <Label layoutX="468.0" layoutY="357.0" prefHeight="41.0" prefWidth="222.0" text="Notifications" textFill="#3b2122">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="885.0" layoutY="357.0" prefHeight="41.0" prefWidth="222.0" text="Sticky Notes" textFill="#3b2122">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

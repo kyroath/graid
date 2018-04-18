@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="140.0" prefWidth="554.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="graidguı.GroupSearchPaneController">
+   <children>
+      <ImageView fitHeight="89.0" fitWidth="96.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="groupName" layoutX="110.0" layoutY="26.0" prefHeight="17.0" prefWidth="131.0" text="Group Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="groupDescription" layoutX="110.0" layoutY="71.0" prefHeight="21.0" prefWidth="332.0" text="GroupDescription" textFill="#726e6e">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="tag1" alignment="CENTER" layoutX="241.0" layoutY="26.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #3B2122;" text="TAG1" textFill="WHITE" />
+      <Label fx:id="tag2" alignment="CENTER" layoutX="309.0" layoutY="26.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #3B2122;" text="TAG1" textFill="WHITE" />
+      <Label fx:id="tag3" alignment="CENTER" layoutX="379.0" layoutY="26.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #3B2122;" text="TAG1" textFill="WHITE" />
+      <ProgressIndicator fx:id="percentage" layoutX="464.0" layoutY="26.0" prefHeight="76.0" prefWidth="70.0" progress="0.0" />
+   </children>
+</AnchorPane>

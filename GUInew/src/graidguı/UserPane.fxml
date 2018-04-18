@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="70.0" prefWidth="306.0" style="-fx-background-color: #3B2122;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="graidguı.UserPaneController">
+   <children>
+      <ImageView fx:id="userImage" fitHeight="67.0" fitWidth="69.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="userName" layoutX="76.0" layoutY="6.0" onMouseClicked="#getProfilePage" prefHeight="33.0" prefWidth="183.0" text="Username" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="userDescription" layoutX="76.0" layoutY="41.0" prefHeight="17.0" prefWidth="164.0" text="User Description" textFill="#c9c7c7" />
+   </children>
+</AnchorPane>
